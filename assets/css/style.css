@@ -1,0 +1,27 @@
+body {
+	background: url("../images/stadium.jpeg");
+}
+
+.game-name {
+	background: white;
+	font-size: 50px;
+	font-family: 'Roboto Slab', serif;
+	text-align: center;
+	padding: 20px;
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+}
+
+.game-play {
+	background: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 24px;
+	float: left;
+	margin-left: 180px;
+	margin-right: 40px;
+	width: 500px;
+	line-height: 2.0;
+}

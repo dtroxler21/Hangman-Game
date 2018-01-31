@@ -1,0 +1,2 @@
+// Creating an array to store the Motown names
+var words = ["HAZARD", "ROONEY", "KANE", "POGBA", "BECKHAM", "LAMPARD", "GERRARD", "DROGBA", "HENRY", "AGUERO", "SHEARER", "PIRES", "SUAREZ", "SILVA", "BERGKAMP", "TERRY", "CECH", "FERDINAND", "VIEIRA", "GIGGS"]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<!--Title for the website and links to css, reset css, and javascript-->
+<head>
+
+	<!--meta tags-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="./assets/javascript/game.js"></script>
+	
+	<title>Hangman</title>
+
+</head>
+
+<body>
+	
+	<div class="game-name">
+		<h1>Hangman: Premier League Players</h1>
+	</div>
+
+	<div class="game-play">
+		<p id="instructions">Press any key to begin!</p>
+		<p id="win-count">Wins: <span id="js-win-count">0</span></p>
+		<p>Current Word:</p>
+		<p><span id="js-current-word"></span>
+		<p>Number of Guesses Remaining:</p>
+		<p><span id="js-guesses-remaining">12</span></p>
+		<p>Letters Already Guessed:</p>
+		<p><span id="js-letters-guessed">?</span></p>
+	</div>
+
+	<div class="image">
+		<img id="js-image" src="./assets/images/soccer.jpeg" alt="Picture of soccer ball">
+	</div>
+
+</body>
+
+</html>

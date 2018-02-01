@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<!--Title for the website and links to css, reset css, and javascript-->
+<!--Title for the website and links to css, reset css-->
 <head>
 
 	<!--meta tags-->
@@ -10,8 +10,9 @@
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+	<!-- linking a Google font for the header -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <script src="./assets/javascript/game.js"></script>
 	
 	<title>Hangman</title>
 
@@ -24,19 +25,27 @@
 	</div>
 
 	<div class="game-play">
-		<p id="instructions">Press any key to begin!</p>
-		<p id="win-count">Wins: <span id="js-win-count">0</span></p>
-		<p>Current Word:</p>
-		<p><span id="js-current-word"></span>
-		<p>Number of Guesses Remaining:</p>
-		<p><span id="js-guesses-remaining">12</span></p>
-		<p>Letters Already Guessed:</p>
-		<p><span id="js-letters-guessed">?</span></p>
+		<div id="instructions">Press any key to begin!</div>
+
+		<!--creatubg spans to use in javascript-->
+		<div>Wins: <span id="win-count">0</span></div>
+		
+		<div>Current Word:</div>
+		<div><span id="word"></span></div>
+		
+		<div>Number of Guesses Remaining:</div>
+		<div><span id="guesses-remaining">12</span></div>
+		
+		<div>Letters Already Guessed:</div>
+		<div><span id="letters-guessed">?</span></div>
 	</div>
 
 	<div class="image">
-		<img id="js-image" src="./assets/images/soccer.jpeg" alt="Picture of soccer ball">
+		<img id="image" src="./assets/images/premier.png" alt="Picture of Premier League logo">
 	</div>
+
+	<!--javascript link after tags so that I can access them in the javascript file-->
+	<script src="./assets/javascript/game.js"></script>
 
 </body>
 

@@ -70,11 +70,13 @@ document.onkeyup = function(event) {
 		begin();
 
 		document.onkeyup = function(event) {
+			//Converting guesses to capital letters which match the letters array
 			var userGuess = event.key.toUpperCase();
 			if (letters.indexOf(userGuess) === -1) {
 				alert ("Choose a letter.");
 			}
 
+			//For when the user guesses a wrong letter than has not been guessed before
 			else if (randomWord.indexOf(userGuess) === -1 && (guessedAgain.indexOf(userGuess) === -1)) {
 				guessesLeft--;
 				guessedLetters.push(userGuess);
@@ -83,6 +85,7 @@ document.onkeyup = function(event) {
 				html.guessesRemaining.innerHTML = guessesLeft;
 			};
 
+			//Replacing underscores with userGuess if the guess is correct and has not been guessed before
 			if ((randomWord.indexOf(userGuess) > -1) && (guessedAgain.indexOf(userGuess) === -1)) {
 				guessedAgain.push(userGuess);
 				for (var j = 0; j < randomWord.length; j++) {
@@ -93,6 +96,8 @@ document.onkeyup = function(event) {
 
 				html.currentWord.innerHTML = underscoreWord.join("");
 
+
+				//Running the won and lost functions
 				loser();
 				winner();
 			};

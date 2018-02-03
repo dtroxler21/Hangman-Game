@@ -48,6 +48,7 @@ function winner(){
 		underscoreWord = [];
 		guessedLetters = [];
 		guessedAgain = [];
+		guessesLeft = 12;
 		begin();
 	};
 };
@@ -58,6 +59,7 @@ function loser(){
 		underscoreWord = [];
 		guessedLetters = [];
 		guessedAgain = [];
+		guessesLeft = 12;
 		begin();
 	};
 };
@@ -91,12 +93,9 @@ document.onkeyup = function(event) {
 
 				html.currentWord.innerHTML = underscoreWord.join("");
 
-				winner();
 				loser();
+				winner();
 			};
 		};
 	};
 };
-
-
-

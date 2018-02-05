@@ -54,6 +54,7 @@ function winner(){
 };
 
 //Losing the game and resetting values to pre-game values
+//Loser function works at times and does not work at other times...I am not sure why
 function loser(){
 	if (guessesLeft === 0) {
 		underscoreWord = [];

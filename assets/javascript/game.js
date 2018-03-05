@@ -42,7 +42,7 @@ function begin() {
 };
 
 //Winning the game and resetting values to pre-game values
-function winner(){
+function win(){
 	if (underscoreWord.indexOf("_") === -1) {
 		wins++;
 		underscoreWord = [];
@@ -53,9 +53,7 @@ function winner(){
 	};
 };
 
-//Losing the game and resetting values to pre-game values
-//Loser function works at times and does not work at other times...I am not sure why
-function loser(){
+function lose() {
 	if (guessesLeft === 0) {
 		underscoreWord = [];
 		guessedLetters = [];
@@ -75,6 +73,8 @@ document.onkeyup = function(event) {
 			var userGuess = event.key.toUpperCase();
 			if (letters.indexOf(userGuess) === -1) {
 				alert ("Choose a letter.");
+				win();
+				lose();
 			}
 
 			//For when the user guesses a wrong letter than has not been guessed before
@@ -84,6 +84,8 @@ document.onkeyup = function(event) {
 				guessedAgain.push(userGuess);
 				html.lettersGuessed.innerHTML = guessedLetters.join(" ");
 				html.guessesRemaining.innerHTML = guessesLeft;
+				win();
+				lose();
 			};
 
 			//Replacing underscores with userGuess if the guess is correct and has not been guessed before
@@ -93,14 +95,11 @@ document.onkeyup = function(event) {
 					if (randomWord[j] === userGuess) {
 						underscoreWord[j] = userGuess;
 					};
-				}
+				win();
+				lose();
+				};
 
 				html.currentWord.innerHTML = underscoreWord.join("");
-
-
-				//Running the won and lost functions
-				loser();
-				winner();
 			};
 		};
 	};
